@@ -1,7 +1,6 @@
-﻿namespace EncryptAesApp.Models
+﻿namespace EncryptAesApp.Models;
+
+public class Data
 {
-    public class Data
-    {
-        public string message { get; set; }
-    }
+    public string? Message { get; set; }
 }

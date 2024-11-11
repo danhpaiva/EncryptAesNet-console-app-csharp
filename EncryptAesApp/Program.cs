@@ -1,19 +1,21 @@
 ﻿using EncryptAesApp.Action;
 using EncryptAesApp.Models;
+using static System.Console;
 
 do
 {
-    Console.WriteLine("Insira o dado a ser Encryptado...");
+    WriteLine("Insira o dado a ser Encryptado...");
     Data data = new()
     {
-        message = Console.ReadLine()
+        Message = Console.ReadLine()
     };
-    EncryptData.EncryptAesManaged(data.message);
+    EncryptData.EncryptAesManaged(data.Message);
 
-    Console.WriteLine("\n\tAperte a tecla 'q' + 'Enter' para sair do programa.\n\tSe deseja continuar aperte 'Enter'.");
-    string letra = Console.ReadLine().ToLower();
+    WriteLine("\n\tAperte a tecla 'q' + 'Enter' para sair do programa." +
+        "\n\tSe deseja continuar aperte 'Enter'.");
+    string letra = ReadLine().ToLower();
     if (letra == "q") { break; }
 }
 while (true);
 
-Console.WriteLine("\nAté breve!");
+WriteLine("\nAté breve!");
